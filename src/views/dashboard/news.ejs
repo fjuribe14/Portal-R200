@@ -1,0 +1,19 @@
+<div class="col-md-9 d-none  card shadow m-2 p-0">
+  <h3 class="card-header p-4">Noticias</h3>
+  <div class="news">
+    <% news.forEach(n=>{ %>
+    <a href="#" class="media list-group-item-action p-3">
+      <i class="fas fa-newspaper h3 mr-3"></i>
+      <div class="media-body">
+        <h5 class="mt-0"><%= n.title %></h5>
+        <small><%= n.descrip %></small>
+        <div class="d-flex">
+          <small class="ml-auto">
+            2/20/20
+          </small>
+        </div>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+</div>

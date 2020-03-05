@@ -1,0 +1,118 @@
+* {
+  scroll-behavior: smooth;
+  @media only screen and (min-width: 768px) {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #40514e;
+    }
+  }
+}
+
+// fonts
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: url("../fonts/UbuntuMono-Regular.ttf");
+}
+
+$font-family-sans-serif: "Ubuntu";
+
+.receipt {
+  font-family: "Ubuntu Mono";
+}
+
+// colors
+$theme-colors: (
+  "primary": #3d6cb9,
+  "secondary": #fafaf6,
+  "info": #00d1ff,
+  "warning": #facf5a,
+  "success": #21e6c1,
+  "danger": #ff5959,
+  "dark": #40514e,
+  "black": #000000
+);
+
+// variables
+$shadow: 0 1px 5px rgba(28, 28, 28, 0.3);
+$enable-pointer-cursor-for-buttons: true;
+$enable-responsive-font-sizes: true;
+$enable-rounded: true;
+$enable-print-styles: false;
+$transition: 0.4s ease-out;
+$body-bg: #fafaf6;
+
+// login
+.login {
+  height: 100vh;
+}
+
+// activity
+.activity {
+  height: 40vh;
+  overflow-x: hidden;
+}
+
+// news
+.news {
+  height: 40vh;
+  overflow-x: hidden;
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// font weight
+[class*="display-"],
+.navbar-brand,
+.brand,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+label,
+.btn,
+.sidenav {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+// btn
+.btn {
+  padding: 0.5em 1.5em;
+  text-transform: capitalize;
+}
+
+// a
+a {
+  cursor: pointer;
+}
+
+// code
+code {
+  color: black;
+}
+
+// cards
+.card {
+  border: none;
+  .card-header {
+    border: none;
+    background: transparent;
+  }
+}

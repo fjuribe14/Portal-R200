@@ -1,0 +1,29 @@
+<div class="col-md-3 card shadow h-100 p-0 m-2">
+  <div class="card-header d-flex p-4">
+    <h3>
+      Balance
+    </h3>
+    <small class="text-success ml-auto"><%= update%></small>
+  </div>
+  <div class="card-body">
+    <h3>
+      $
+      <!-- if -->
+      <% if(stock.length > 0){ %>
+      <!-- foreach -->
+      <% stock.forEach(s => { %> <% if(s.stock >= 0){ %>
+      <span class="display-1"><%= s.stock %></span>
+      <% }else{ %>
+      <span class="display-1 text-danger"><%= s.stock %></span>
+
+      <% } %>
+      <!-- end foreach -->
+      <% }) %>
+      <!-- else -->
+      <% }else{ %>
+      <span class="display-1">0</span>
+      <!-- end if -->
+      <% } %>
+    </h3>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="row justify-content-center py-3">
+  <div class="col-md-4 card shadow m-2">
+    <div class="card-body">
+      <h3 class="card-title">Registrar Pago</h3>
+      <p class="small text-muted">
+        El pago se abonará al <strong>Fondo de Recuperación</strong> una vez sea
+        verificado por el
+        <strong>ADMINISTRADOR</strong>
+      </p>
+      <form class="mt-4" action="/payment/add" method="POST">
+        <div class="form-group">
+          <select name="apto" class="form-control" required>
+            <option selected disabled>Apartamento</option>
+            <option value="LOCAL-1">LOCAL-1</option>
+            <option value="LOCAL-2">LOCAL-2</option>
+            <option value="LOCAL-3">LOCAL-3</option>
+            <option value="MZ-A">MZ-A</option>
+            <option value="MZ-B">MZ-B</option>
+            <option value="1-A">1-A</option>
+            <option value="1-B">1-B</option>
+            <option value="1-C">1-C</option>
+            <option value="1-D">1-D</option>
+            <option value="2-A">2-A</option>
+            <option value="2-B">2-B</option>
+            <option value="2-C">2-C</option>
+            <option value="2-D">2-D</option>
+            <option value="3-A">3-A</option>
+            <option value="3-B">3-B</option>
+            <option value="3-C">3-C</option>
+            <option value="3-D">3-D</option>
+            <option value="4-A">4-A</option>
+            <option value="4-B">4-B</option>
+            <option value="4-C">4-C</option>
+            <option value="4-D">4-D</option>
+            <option value="5-A">5-A</option>
+            <option value="5-B">5-B</option>
+            <option value="5-C">5-C</option>
+            <option value="5-D">5-D</option>
+            <option value="6-A">6-A</option>
+            <option value="6-B">6-B</option>
+            <option value="6-C">6-C</option>
+            <option value="6-D">6-D</option>
+            <option value="7-A">7-A</option>
+            <option value="7-B">7-B</option>
+            <option value="7-C">7-C</option>
+            <option value="7-D">7-D</option>
+            <option value="PH">PH</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select name="month" class="form-control" required>
+            <option selected disabled>Mes</option>
+            <option value="ENERO">ENERO</option>
+            <option value="FEBRERO">FEBRERO</option>
+            <option value="MARZO">MARZO</option>
+            <option value="ABRIL">ABRIL</option>
+            <option value="MAYO">MAYO</option>
+            <option value="JUNIO">JUNIO</option>
+            <option value="JULIO">JULIO</option>
+            <option value="AGOSTO">AGOSTO</option>
+            <option value="SEPTIEMBRE">SEPTIEMBRE</option>
+            <option value="OCTUBRE">OCTUBRE</option>
+            <option value="NOVIEMBRE">NOVIEMBRE</option>
+            <option value="DICIEMBRE">DICIEMBRE</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select name="mount" class="form-control" required>
+            <option selected disabled>Monto</option>
+            <option value="2">$2</option>
+            <option value="4">$4</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary float-right mt-5">
+          enviar pago
+          <i class="fas fa-arrow-right ml-1"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="row justify-content-center py-3">
+  <div class="col-md-4 card shadow m-2">
+    <div class="card-body">
+      <h3 class="card-title">Registrar Gasto</h3>
+      <p class="small text-muted">
+        El gasto se restará al <strong>Fondo de Recuperación</strong>
+      </p>
+      <form
+        class="mt-4"
+        action="/expenses/<%= expenditure.id %>?_method=PUT"
+        method="POST"
+      >
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="payto"
+            placeholder="Pagar a (Ej. r200 C.A.)"
+            value="<%= expenditure.payto %>"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="reason"
+            placeholder="Motivo (Ej. Mantenimiento de areas comunes)"
+            value="<%= expenditure.reason %>"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            name="descrip"
+            rows="2"
+            class="form-control"
+            placeholder="Descripción"
+            required
+          >
+<%= expenditure.descrip %></textarea
+          >
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="mount"
+            placeholder="Monto"
+            min="0"
+            value="<%= expenditure.mount %>"
+            required
+          />
+        </div>
+        <div class="mt-5">
+          <a href="/" class="btn btn-danger float-left">cancelar</a>
+          <button type="submit" class="btn btn-primary float-right">
+            editar gasto
+            <i class="fas fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

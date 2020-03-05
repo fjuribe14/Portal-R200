@@ -1,0 +1,71 @@
+<div class="col-md-6 card shadow p-0 m-2">
+  <h3 class="card-header p-4">Movimientos</h3>
+  <div class="list-group list-group-flush activity">
+    <!-- if -->
+    <% if(payments.length > 0 || expenses.length > 0 ){ %>
+    <!-- foreach -->
+    <% payments.forEach(p => { %>
+    <a
+      href="/payment/<%= p.id %>"
+      class="list-group-item list-group-item-action"
+    >
+      <strong class="text-capitalize"><%= p.title%></strong>
+      <span class="badge badge-dark ml-1"><%= p.apto%></span>
+      <div>
+        <small>
+          <i class="fas fa-calendar mr-1"></i>
+          <%= p.month%>
+        </small>
+
+        <span class="float-right">
+          <!-- mount -->
+          $ <%= p.mount%>
+          <!-- if -->
+          <% if(p.status){ %>
+          <i class="fas fa-check-circle text-success ml-1"></i>
+          <% }else{ %>
+          <i class="fas fa-clock text-danger ml-1"></i>
+          <!-- end if -->
+          <% } %>
+        </span>
+      </div>
+    </a>
+    <!-- end foreach -->
+    <% }) %>
+
+    <!-- foreach -->
+    <% expenses.forEach(e => { %>
+    <a
+      href="/expenses/<%= e.id %>"
+      class="list-group-item list-group-item-action"
+    >
+      <strong class="text-capitalize"><%= e.title%></strong>
+      <span class="badge badge-dark text-uppercase text-wrap ml-1">
+        <%= e.payto%>
+      </span>
+      <div>
+        <small class="text-uppercase">
+          <i class="fas fa-hammer mr-1"></i>
+          <%= e.reason %>
+        </small>
+        <span class="float-right">
+          <!-- mount -->
+          $ <%= e.mount%>
+          <!-- if -->
+          <i class="fas fa-check-circle text-success ml-1"></i>
+        </span>
+      </div>
+    </a>
+    <!-- end foreach -->
+    <% }) %>
+    <!-- else -->
+    <% }else{ %>
+    <div class="list-group-item list-group-item-action">
+      <a class="m-auto">
+        No existen movimientos
+      </a>
+    </div>
+    <!-- end if -->
+    <% } %>
+  </div>
+</div>

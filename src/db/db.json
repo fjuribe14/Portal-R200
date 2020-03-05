@@ -1,0 +1,130 @@
+{
+  "stock": [
+    {
+      "id": "a3190aeb-2d9d-4cb1-a696-b98aa95efdff",
+      "date": 1582834096681,
+      "stock": 10
+    }
+  ],
+  "payment": [
+    {
+      "id": "0eff3440-c901-4da2-be3e-4cf2d9f324f1",
+      "date": 1583374947238,
+      "title": "pago",
+      "apto": "LOCAL-2",
+      "month": "FEBRERO",
+      "status": true,
+      "mount": "4"
+    },
+    {
+      "id": "1d0f897d-e261-48d2-8bea-ab50a56836ed",
+      "date": 1583374963045,
+      "title": "pago",
+      "apto": "MZ-B",
+      "month": "ABRIL",
+      "status": true,
+      "mount": "2"
+    },
+    {
+      "id": "0ca8e310-2b97-4901-8494-404d6343a71d",
+      "date": 1583374972413,
+      "title": "pago",
+      "apto": "1-A",
+      "month": "FEBRERO",
+      "status": true,
+      "mount": "2"
+    },
+    {
+      "id": "ccef3995-f681-4115-acb5-62792456aeca",
+      "date": 1583374980695,
+      "title": "pago",
+      "apto": "1-C",
+      "month": "FEBRERO",
+      "status": true,
+      "mount": "2"
+    },
+    {
+      "id": "d051d1f9-24aa-4fed-9602-902354778771",
+      "date": 1583379690754,
+      "title": "pago",
+      "apto": "MZ-B",
+      "month": "ABRIL",
+      "status": true,
+      "mount": "2"
+    },
+    {
+      "id": "88263b11-5b5f-4e2c-bc24-b4a51ab85659",
+      "date": 1583417589241,
+      "title": "pago",
+      "apto": "LOCAL-2",
+      "month": "ENERO",
+      "status": false,
+      "mount": "4"
+    }
+  ],
+  "users": [
+    {
+      "id": "16fc2e6d-3b2f-4bf4-ad7c-34ec4d4f8d86",
+      "date": 1583292118351,
+      "username": "admin",
+      "password": "$2a$10$/pWTkj3cCcsZkKjRbXxa8uAdn7ywDfN/Vyg67.JNo8Csc4yNU5Va2",
+      "privileges": true
+    },
+    {
+      "id": "4434306c-a39b-4c3c-abb6-b00974581c49",
+      "date": 1583294905840,
+      "username": "r200",
+      "password": "$2a$10$BkL6Fm2cOvOgONdGgI4Wi.MWBz1Qk1BCpy6uW8T5xFAGUegMD4Utm",
+      "privileges": false
+    }
+  ],
+  "expenses": [
+    {
+      "id": "6b3ab69a-7537-4373-a897-c77f94477bda",
+      "date": 1583417690425,
+      "title": "gasto",
+      "payto": "csrgrtyt",
+      "reason": "gtdvsrefsrtyg",
+      "descrip": "vtgscrtygth",
+      "mount": "4"
+    }
+  ],
+  "news": [
+    {
+      "id": "e2195850-65af-49d0-90b8-533a8e3832c3",
+      "date": 1583350325523,
+      "title": "image1",
+      "descrip": "casrvcryytr"
+    },
+    {
+      "id": "0ccc3a95-6ce3-41f1-adf8-7fd770aa104d",
+      "date": 1583365534765,
+      "title": "esta es una noticia",
+      "descrip": "para informar a la gente"
+    },
+    {
+      "id": "9fd517a9-57ff-4971-aea2-f747385afd9e",
+      "date": 1583375741215,
+      "title": "task 1",
+      "descrip": "rghymujtredwsaz<"
+    },
+    {
+      "id": "a9b85a45-3be2-4f80-a301-9942878120c6",
+      "date": 1583375751047,
+      "title": "bnhgftfrd",
+      "descrip": "mkujhygtfdsx"
+    },
+    {
+      "id": "97e7326a-c38e-4a12-b6ff-8c139479b6bd",
+      "date": 1583375756621,
+      "title": "hjkl.ñ-",
+      "descrip": "fdghjkl,mnbv cxz<"
+    },
+    {
+      "id": "5e7c39af-45b0-4218-a71c-a33555a716ad",
+      "date": 1583375763040,
+      "title": "rehtyjuk,.jhgbfvdcx",
+      "descrip": "sdfgbnhmju65432q"
+    }
+  ]
+}

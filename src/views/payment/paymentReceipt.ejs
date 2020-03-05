@@ -1,0 +1,83 @@
+<div class="row justify-content-center py-3">
+  <div class="col-md-4 card receipt text-uppercase shadow m-2">
+    <div class="card-body">
+      <div class="w-100 d-flex">
+        <button class="btn d-print-none ml-auto" onclick="window.print()">
+          <i class="fas fa-print"></i>
+        </button>
+      </div>
+      <div class="text-center">
+        <h1>Residencias 200</h1>
+        <p class="small">esq. crucesitas a porvenir</p>
+        <hr />
+        <h4 class="mb-4"><%= payment.title %></h4>
+      </div>
+      <p><strong>ref:</strong> <%= payment.id%></p>
+      <p><strong>fecha:</strong> <%= date %></p>
+      <p><strong>apartamento:</strong> <%= payment.apto %></p>
+      <p><strong>mes abonado:</strong> <%= payment.month %></p>
+      <p>
+        <strong>status:</strong>
+        <!-- if -->
+        <% if(payment.status){ %>
+        <span class="text-success">verificado</span>
+        <% }else{ %>
+        <span class="text-danger">por verificar</span>
+        <!-- end if --><% } %>
+      </p>
+      <h4 class="mb-4">monto: $<%= payment.mount %></h4>
+      <hr />
+      <p class="text-justify small">
+        <strong>nota:</strong> en el momento que el pago sea verificado por el
+        administrador el monto será abonado al
+        <strong>fondo de recuperación</strong> automaticamente.
+      </p>
+    </div>
+  </div>
+  <div class="col-12 d-flex justify-content-center d-print-none">
+    <div class="col-md-4 row">
+      <div class="col-12">
+        <% if(user.privileges){ %>
+          <!-- if -->
+          <% if(!payment.status){ %>
+            <a href="/payment/edit/<%= payment.id %>" class="btn btn-primary my-4">editar</a>
+            <!-- end if -->
+            <% } %>
+            <% } %>
+      <a href="/" class="btn btn-success float-right my-4">siguiente</a>
+      </div>
+      <div class="col-12">
+      <% if(user.privileges){ %>
+        <!-- delete -->
+      <form
+      class="text-center"
+      action="/payment/<%= payment.id %>?_method=DELETE"
+      method="POST"
+    >
+      <input type="hidden" name="_method" value="DELETE" />
+      <button type="submit" class="btn btn-outline-danger m-2">
+        <i class="fas fa-times mr-1"></i>
+        eliminar
+      </button>
+    </form>
+    <!-- validate -->
+    <form
+      class="text-center"
+      action="/payment/validate/<%= payment.id %>?_method=PUT"
+      method="POST"
+    >
+      <input type="hidden" name="_method" value="PUT" />
+      <% if(payment.status){ %> 
+      <button type="submit" class="btn btn-outline-dark m-2" disabled>
+      <% }else{ %>
+      <button type="submit" class="btn btn-outline-dark m-2">
+      <% } %>
+        <i class="fas fa-check-circle mr-1"></i>
+        validar
+      </button>
+    </form>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

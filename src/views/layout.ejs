@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('partials/head') %>
+  <body>
+    <!-- if -->
+    <% if(user){ %>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+    <!-- end if -->
+    <% } %>
+
+    <div class="container-fluid main-container">
+      <!-- alerts -->
+      <%- include('partials/alerts') %>
+      <!-- body -->
+      <%- body %>
+    </div>
+
+    <!-- if -->
+    <% if(user){ %>
+    <!-- navbar -->
+    <%- include('partials/footer') %>
+    <!-- end if -->
+    <% } %>
+    <!-- scripts -->
+    <%- include('partials/scripts') %>
+  </body>
+</html>
