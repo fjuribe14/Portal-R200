@@ -7,16 +7,19 @@ const indexCtrl = {};
 indexCtrl.index = async (req, res) => {
   const payments = await getConnection()
     .get("payment")
-    .sortBy("date")
+    .orderBy("date", "desc")
     .value();
   const expenses = await getConnection()
     .get("expenses")
+    .orderBy("date", "desc")
     .value();
   const stock = await getConnection()
     .get("stock")
+    .orderBy("date", "desc")
     .value();
   const news = await getConnection()
     .get("news")
+    .orderBy("date", "desc")
     .value();
 
   const update = moment().calendar(stock.date);
